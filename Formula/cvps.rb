@@ -1,20 +1,20 @@
 class Cvps < Formula
   desc "ClaudeVPS CLI - Manage remote development sandboxes"
   homepage "https://claudevps.com"
-  version "0.1.1"
+  version "0.1.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/Achronon/cvps/releases/download/v#{version}/cvps-darwin-arm64"
-      sha256 "2559eeed97abf61c973fc4d47ff19b798affb366def7e5f143670c1dc4a07367"
+      sha256 "6d543ce83bdad8d7f57dd688fbbdecd7f87bbfcecbd99a7215ce3fa5118d41de"
 
       def install
         bin.install "cvps-darwin-arm64" => "cvps"
       end
     else
       url "https://github.com/Achronon/cvps/releases/download/v#{version}/cvps-darwin-amd64"
-      sha256 "d4ae0f0a0f2eeee161ea35713fde256cf121b7e1645b816bd9faee13cdee1b2f"
+      sha256 "f6e6732640e3a61ffa318aebaef209899199aca8b1789a2a476aa8d5365ab0d7"
 
       def install
         bin.install "cvps-darwin-amd64" => "cvps"
@@ -25,14 +25,14 @@ class Cvps < Formula
   on_linux do
     if Hardware::CPU.arm?
       url "https://github.com/Achronon/cvps/releases/download/v#{version}/cvps-linux-arm64"
-      sha256 "9a72957111160f54728d00c5f47ae6e5e288b7d3188aee2b1db237e1169924fe"
+      sha256 "519dc729986d9f806758b7132855b49dd5a1d1c90580430be75d3765d4a9fd94"
 
       def install
         bin.install "cvps-linux-arm64" => "cvps"
       end
     else
       url "https://github.com/Achronon/cvps/releases/download/v#{version}/cvps-linux-amd64"
-      sha256 "f4b2842ffab0c12a5f5e9d4b840412811c466d3d82a01bf33232c22d220cfbd9"
+      sha256 "360c2909322ef0bf382ed02bc18a5945006d1c804113f3bcbbe22ef90322003f"
 
       def install
         bin.install "cvps-linux-amd64" => "cvps"
